@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     
     func foreverJumpingAnimation(timedelay: Int, IncreaseBy: Int) {
-        UIView.animate(withDuration: 1.0, delay: Double(timedelay), usingSpringWithDamping: 1.0, initialSpringVelocity: 2.0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 1.0, delay: Double(timedelay), usingSpringWithDamping: 1.0, initialSpringVelocity: 2.0, options: [.repeat, .autoreverse], animations: {
             
             let translate1 = CGAffineTransform(translationX: 0, y: -50)
             
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
                 each.transform = translate1
             }
             
-        }, completion: nil)
+        })
     }
     
     func textFieldAnimation() {
